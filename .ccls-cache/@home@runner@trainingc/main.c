@@ -1,30 +1,16 @@
 #include <stdio.h>
 
-int main(void) {
-  char op;
-  int num1, num2, result;
+int main(void){
+  int a, b;
+  printf("Odd numbers to: ");
+  scanf("%d", &a);
+  printf("Odd numbers from 5 to %d: \n", a);
 
-  printf("Ojay's basic calc\n");
-  printf("Enter [num1] [+ - * /] [num2]\n");
-  scanf("%d %c %d", &num1, &op, &num2);
-
-  switch(op){
-    case '+':
-      result = num1 + num2;
-    break;
-    case '-':
-     result = num1 - num2;
-    break;
-    case '*':
-      result = num1 * num2;
-    break;
-    case '/':
-      result = num1 / num2;
-    break;
-    default:
-      printf("Invalid operator");
-  }
-  printf("The result is: %d %c %d = %d", num1, op, num2, result);
-  
+  for(b = 5; b <= a; b++)
+    {
+    if (b % 2 == 1){
+      printf("odd numbers are: %d\n", b);
+    }
+    }
   return 0;
 }
